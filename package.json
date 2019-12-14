@@ -1,0 +1,25 @@
+{
+  "name": "fontx",
+  "version": "0.0.1",
+  "description": "Making fonts easier.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prouser123/FontX.git"
+  },
+  "keywords": [
+    "font"
+  ],
+  "author": "Prouser123",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Prouser123/FontX/issues"
+  },
+  "homepage": "https://github.com/Prouser123/FontX#readme",
+  "dependencies": {
+    "fontkit": "^1.8.0"
+  }
+}
