@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/Prouser123/FontX#readme",
   "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
     "fontkit": "^1.8.0"
   }
 }
