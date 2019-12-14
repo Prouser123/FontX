@@ -76,6 +76,8 @@ app.get("/points", (req, res) => {
 app.get("/points/:p", (req, res) => {
   const found = data.find(i => i.point == req.params.p);
   if (found != undefined) {
+    res.set("X-Result-Found", "1");
+    res.set("Cache-Control", "public, max-age=86400");
     res.type("image/svg+xml").send(found.file);
   } else {
     res.status(404).json({ error: "glyph not found" });
