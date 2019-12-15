@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Making fonts easier.",
   "main": "api.js",
+  "bin": {
+    "fontx": "./cli.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Prouser123/FontX.git"
@@ -22,7 +25,8 @@
     "empty-dir": "^2.0.0",
     "express": "^4.17.1",
     "fontkit": "^1.8.0",
-    "prefix-logger": "0.0.2"
+    "prefix-logger": "0.0.2",
+    "yargs": "^15.0.2"
   },
   "engines": {
     "node": ">=6"
