@@ -12,7 +12,9 @@ module.exports = (obj, port) => {
   app.set("views", path.join(__dirname, "../views"));
 
   registerRoutes(app, obj);
+
   app.listen(port);
+
   console.log(`listening on port ${port}`.green);
   console.log(
     `WebView now available at: http://localhost:${port}/webview`.green
