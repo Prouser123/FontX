@@ -13,7 +13,10 @@ module.exports = (obj, port) => {
 
   registerRoutes(app, obj);
   app.listen(port);
-  console.log(("listening on port " + port).green);
+  console.log(`listening on port ${port}`.green);
+  console.log(
+    `WebView now available at: http://localhost:${port}/webview`.green
+  );
 
   return app;
 };
