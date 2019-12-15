@@ -1,3 +1,4 @@
+const path = require("path");
 const express = require("express");
 
 // Console formatting
@@ -6,6 +7,10 @@ require("colors");
 
 module.exports = (obj, port) => {
   const app = express();
+
+  // Hotfix for when running through yargs CLI
+  app.set("views", path.join(__dirname, "../views"));
+
   registerRoutes(app, obj);
   app.listen(port);
   console.log(("listening on port " + port).green);
