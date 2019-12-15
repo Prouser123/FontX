@@ -103,8 +103,8 @@ dist
 # TernJS port file
 .tern-port
 
-# Output directory
-out/
+# export command
+*.svg
 
 # Fonts
 *.ttf

@@ -78,3 +78,7 @@ example.js
 # fonts
 
 *.ttf
+
+# export command
+
+*.svg
