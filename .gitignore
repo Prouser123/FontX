@@ -106,5 +106,5 @@ dist
 # Output directory
 out/
 
-# Input file
-font.ttf
+# Fonts
+*.ttf

@@ -2,10 +2,7 @@
   "name": "fontx",
   "version": "0.0.1",
   "description": "Making fonts easier.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "api.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Prouser123/FontX.git"
@@ -27,7 +24,7 @@
     "fontkit": "^1.8.0",
     "prefix-logger": "0.0.2"
   },
-  "engine": [
-    "node >= v6.0.0"
-  ]
+  "engines": {
+    "node": ">=6"
+  }
 }

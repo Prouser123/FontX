@@ -1,3 +1,4 @@
+const fs = require("fs");
 const fontkit = require("fontkit");
 
 // Console formatting
@@ -11,6 +12,10 @@ module.exports = fontFileName => {
   console.log(("loading with file: " + fontFileName).yellow);
 
   // Variables
+  if (!fs.existsSync(fontFileName)) {
+    console.error("file does not exist!");
+    process.exit(1);
+  }
   const font = fontkit.openSync(fontFileName);
   const chars = font.characterSet;
   const data = [];

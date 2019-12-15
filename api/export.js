@@ -14,13 +14,13 @@ module.exports = (obj, outputFolderName) => {
     }
   } catch (err) {
     console.error(`Error creating folder '${outputFolderName}': ${err}`);
-    process.exit(1);
+    process.exit(2);
   }
 
   // Check if the directory is empty.
   if (!empty.sync(outputFolderName)) {
     console.error(`Folder '${outputFolderName}' not empty!`);
-    process.exit(2);
+    process.exit(3);
   }
 
   console.log("saving glyphs...".grey);
@@ -32,7 +32,7 @@ module.exports = (obj, outputFolderName) => {
     });
   } catch (err) {
     console.error(`Error saving files: ${err}`);
-    process.exit(3);
+    process.exit(4);
   }
 
   console.log("done!".green);
