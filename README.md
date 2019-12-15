@@ -1,7 +1,7 @@
 # FontX
 
-![npm](https://img.shields.io/npm/v/fontx)
-![node](https://img.shields.io/node/v/fontx)
+[![npm](https://img.shields.io/npm/v/fontx)
+![node](https://img.shields.io/node/v/fontx)](https://www.npmjs.com/package/fontx)
 
 A npm package to make working with fonts easier.
 
