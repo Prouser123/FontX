@@ -37,6 +37,14 @@
         color: silver;
         text-align: center;
       }
+      /* IMG force aspect ratio */
+      img {
+        display: block;
+        max-width: 150px;
+        max-height: 150px;
+        width: auto;
+        height: auto;
+      }
     </style>
   </head>
   <body>
@@ -51,7 +59,6 @@
       <div class="col">
         <a href="../points/<%- i.point -%>" target="_blank"
           ><img
-            height="130"
             src="data:image/svg+xml;base64,<%- new Buffer(i.file).toString('base64') -%>"
         /></a>
       </div>
