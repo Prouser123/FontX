@@ -3,7 +3,7 @@ const fontx = require("./api");
 // Initialise the core (required)
 const core = fontx.Core("font.ttf");
 
-// Start the Express webserver (optional)
+// Start the Express webserver
 fontx.Express(core, 3000);
 
 // Export all glyphs to a folder
