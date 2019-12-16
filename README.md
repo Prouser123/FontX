@@ -46,6 +46,6 @@ fontx.Express(core, 3000);
 fontx.Export(core, "out");
 ```
 
-## Links
+## v1.2 Feat: Dynamic SVGs
 
-[Introducing Dynamic SVG (v1.2 or later)](./.md_resources/dyn_svg.png)
+![Introducing Dynamic SVG (v1.2 or later)](./.md_resources/dyn_svg.png)
