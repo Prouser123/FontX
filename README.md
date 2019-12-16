@@ -44,5 +44,8 @@ fontx.Express(core, 3000);
 
 // Export all glyphs to a folder
 fontx.Export(core, "out");
-
 ```
+
+## v1.2 Feat: Dynamic SVGs
+
+![Introducing Dynamic SVG (v1.2 or later)](./.md_resources/dyn_svg.png)

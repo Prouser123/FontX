@@ -82,3 +82,11 @@ example.js
 # export command
 
 *.svg
+
+# markdown resources
+
+.md_resources
+
+# travis config
+
+.travis.yml
