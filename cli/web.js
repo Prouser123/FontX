@@ -17,6 +17,6 @@ exports.builder = yargs => {
 };
 
 exports.handler = argv => {
-  const core = fontx.Core(argv.font);
+  const core = fontx.Core(argv.font, argv.debug);
   fontx.Express(core, argv.port);
 };

@@ -12,4 +12,10 @@ require("yargs")
   .version()
   // Set aliases
   .alias("help", "h")
-  .alias("version", "v").argv;
+  .alias("version", "v")
+  // Set --debug option
+  .option("debug", {
+    default: false,
+    type: "boolean",
+    description: "show debug information"
+  }).argv;

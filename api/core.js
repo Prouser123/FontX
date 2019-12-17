@@ -8,7 +8,8 @@ require("colors");
 const { toHex, glyphToSVGFile } = require("./helpers");
 
 // Initialisation function
-module.exports = fontFileName => {
+module.exports = (fontFileName, debug = false) => {
+  if (debug) console.log("Debug mode enabled.".yellow);
   console.log(("loading with file: " + fontFileName).yellow);
 
   // Variables
@@ -28,7 +29,7 @@ module.exports = fontFileName => {
 
       data.push({
         point: point,
-        file: glyphToSVGFile(glyph)
+        file: glyphToSVGFile(glyph, debug)
       });
     } else {
       console.log(`skipping default character ${point}`.grey);
