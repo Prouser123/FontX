@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const { Font } = require("fonteditor-core");
+const { Font, woff2 } = require("fonteditor-core");
 
 const providers = require("./providers");
 
@@ -38,7 +38,7 @@ const outputFileSupported = file => {
   return providerArray().includes(getFormat(file));
 };
 
-module.exports = (inFile, outFile) => {
+module.exports = async (inFile, outFile) => {
   // INPUT CHECK
   // [x] File exists
   // [ ] File is a font?? (maybe just do a try catch over the import)
@@ -75,6 +75,11 @@ module.exports = (inFile, outFile) => {
   const fileType = inFile.split(".").slice("-1")[0];
 
   console.log(fileType);
+
+  if (fileType == "woff2") {
+    // For woff2 input files we need to init the library before loading
+    await woff2.init();
+  }
 
   let font = Font.create(buffer, {
     type: fileType
