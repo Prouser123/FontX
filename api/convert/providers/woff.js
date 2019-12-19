@@ -1,3 +1,3 @@
 const c = require("./common");
 
-module.exports = font => c(font, "out", "woff");
+module.exports = (font, outName) => c(font, outName, "woff");
