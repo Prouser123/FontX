@@ -1,7 +1,7 @@
 const fontx = require("../api");
 
 exports.command = "convert <input> <output>";
-exports.desc = "start the webserver";
+exports.desc = "convert a font file to another format";
 
 exports.builder = yargs => {
   yargs.positional("input", {
@@ -10,8 +10,6 @@ exports.builder = yargs => {
   });
 
   yargs.positional("output", {
-    // Dynamic output options based on provider exports
-    //choices: Object.keys(require("../api/convert/providers")),
     describe: "output font",
     type: "string"
   });
