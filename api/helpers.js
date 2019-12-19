@@ -1,4 +1,6 @@
-const debugLogger = require("prefix-logger")("debug.glyphToSVGFile");
+const debugLogger = require("prefix-logger")(
+  "[" + "DEBUG".red + "] fontx.helpers.glyphToSVGFile"
+);
 
 function toHex(value) {
   return ("0000" + value.toString(16).toUpperCase()).slice(-4);
