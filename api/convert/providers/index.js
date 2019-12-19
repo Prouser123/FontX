@@ -1,12 +1,13 @@
-const ttf = require("./ttf");
-const woff = require("./woff");
+const c = require("./common");
+
 const woff2 = require("./woff2");
-const eot = require("./eot");
+
+// TODO
 const svg = {};
 
 module.exports = {
-  ttf,
-  woff,
+  ttf: (font, outName) => c(font, outName, "ttf"),
+  woff: (font, outName) => c(font, outName, "woff"),
   woff2,
-  eot
+  eot: (font, outName) => c(font, outName, "eot")
 };
