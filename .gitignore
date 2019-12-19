@@ -108,3 +108,7 @@ dist
 
 # Fonts
 *.ttf
+*.otf
+*.eot
+*.woff
+*.woff2

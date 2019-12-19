@@ -24,6 +24,7 @@
     "ejs": "^3.0.1",
     "empty-dir": "^2.0.0",
     "express": "^4.17.1",
+    "fonteditor-core": "^2.0.7",
     "fontkit": "^1.8.0",
     "prefix-logger": "0.0.2",
     "yargs": "^15.0.2"
