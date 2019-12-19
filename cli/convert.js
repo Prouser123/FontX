@@ -16,5 +16,5 @@ exports.builder = yargs => {
 };
 
 exports.handler = argv => {
-  fontx.Convert(argv.input, argv.output);
+  fontx.Convert(argv.input, argv.output, argv.debug);
 };

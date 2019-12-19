@@ -6,6 +6,8 @@ const providers = require("./providers");
 
 const console = require("prefix-logger")("fontx.convert");
 
+let dlog = { log: m => {} };
+
 // TODO
 // CHECK INPUT / OUTPUT files
 
@@ -38,7 +40,11 @@ const outputFileSupported = file => {
   return providerArray().includes(getFormat(file));
 };
 
-module.exports = async (inFile, outFile) => {
+module.exports = async (inFile, outFile, debug = false) => {
+  if (debug) {
+    require("colors");
+    dlog = require("prefix-logger")("[" + "DEBUG".red + "] fontx.convert");
+  }
   // INPUT CHECK
   // [x] File exists
   // [ ] File is a font?? (maybe just do a try catch over the import)
@@ -69,24 +75,27 @@ module.exports = async (inFile, outFile) => {
     process.exit(5);
   }
 
-  console.log(inFile);
+  dlog.log("all pre-run checks passed.".green);
+  dlog.log(`${inFile} >> ${outFile}`.yellow);
+  dlog.log(
+    `input  | name: '${getName(inFile)}' format: '${getFormat(inFile)}'`
+  );
+  dlog.log(
+    `output | name: '${getName(outFile)}' format: '${getFormat(outFile)}'`
+  );
+
   const buffer = fs.readFileSync(inFile);
 
-  const fileType = inFile.split(".").slice("-1")[0];
-
-  console.log(fileType);
-
-  if (fileType == "woff2") {
+  if (getFormat(inFile) == "woff2") {
     // For woff2 input files we need to init the library before loading
     await woff2.init();
+    dlog.log("WOFF2 loaded!".green);
   }
 
   let font = Font.create(buffer, {
-    type: fileType
+    type: getFormat(inFile)
   });
 
   // Call the provider
-  console.log(getFormat(outFile));
-  console.log(getName(outFile));
   providers[getFormat(outFile)](font, getName(outFile));
 };
